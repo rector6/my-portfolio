@@ -20,21 +20,21 @@ if(navClose){
 }
 
 // ===========================
-// const navLink = document.getElementById('.nav_menu');
+const navLink = document.getElementById('.nav_menu');
 
-// function linkAction() {
-//     const navMenu = document.getElementById('nav-menu');
-//     // 
-//     navMenu.classList.remove('show-menu');
-// };
-// navLink.forEach(n => n.addEventListener('click', linkAction));
+function linkAction() {
+    const navMenu = document.getElementById('nav-menu');
+    // 
+    navMenu.classList.remove('show-menu');
+}
+navLink.forEach(n => n.addEventListener('click', linkAction));
 
 
 
 
 // ======================accordion skill javascript
 
-const skillsContent =  document.getElementsByClassName('skills_content'),
+const skillsContent = document.getElementsByClassName('skills_content'),
       skillsHeader = document.querySelectorAll('.skills_header')
 
 function toggleSkills(){
@@ -43,12 +43,13 @@ function toggleSkills(){
     for(i = 0; i < skillsContent.length; i++){
         skillsContent[i].className = 'skills_content skills_close';
     }
-    if(itemClass ==='skills_content skill_close'){
+    if(itemClass === 'skills_content skill_close'){
         this.parentNode.className = 'skills_content skills_open'; 
     }
 }
+skillsHeader.forEach(n => n.addEventListener('click', toggleSkills));
 
-skillsHeader.forEach((el) => {
-    el.addEventListener('click', toggleSkills)
-})
+// skillsHeader.forEach((el) => {
+//     el.addEventListener('click', toggleSkills)
+// });
 // =================================
