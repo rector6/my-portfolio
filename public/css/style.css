@@ -67,6 +67,9 @@
         --normal-font-size: 1rem;
         --small-font-size: .875;
         --smaller-font-size: .813rem;
+
+        --font-medium: 500;
+        --font-semi-bold: 600 ;
     }
     
 }
@@ -444,10 +447,10 @@ img {
     cursor: pointer;
 }
 
-.qualification_button:hover {
+.qualification_button:hover{
     color: var(--first-color);
 }
-.qualification_icon {
+.qualification_icon{
     font-size: 1.8rem;
     margin-right: var(--mb-0-25);
 }
@@ -458,5 +461,9 @@ img {
 }
 .qualification_title{
     font-size: var(--normal-font-size);
-    font-weight: var(--font-medium);
+    font-weight: var(600);
+}
+.qualification_subtitle {
+    display: inline-block;
+    font-size: var(--small-font-size);
 }
